@@ -8,8 +8,8 @@
 // Chassis constructor
 ez::Drive chassis(
     // These are your drive motors, the first motor is used for sensing!
-    {-5, -6, -7},  // Left Chassis Ports (negative port will reverse it!)
-    {11, 15, 16},  // Right Chassis Ports (negative port will reverse it!)
+    {-11},  // Left Chassis Ports (negative port will reverse it!)
+    {20},  // Right Chassis Ports (negative port will reverse it!)
 
     21,     // IMU Port
     4.125,  // Wheel Diameter (Remember, 4" wheels without screw holes are actually 4.125!)
@@ -114,7 +114,7 @@ void autonomous() {
  */
 void opcontrol() {
   // This is preference to what you like to drive on
-  pros::motor_brake_mode_e_t driver_preference_brake = MOTOR_BRAKE_COAST;
+  pros::motor_brake_mode_e_t driver_preference_brake = MOTOR_BRAKE_BRAKE;
 
   chassis.drive_brake_set(driver_preference_brake);
 
