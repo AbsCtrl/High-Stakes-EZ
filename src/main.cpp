@@ -8,12 +8,12 @@
 // Chassis constructor
 ez::Drive chassis(
     // These are your drive motors, the first motor is used for sensing!
-    {-11, 12},  // Left Chassis Ports (negative port will reverse it!)
-    {20, 19},  // Right Chassis Ports (negative port will reverse it!)
+    {19, -20, -11},  // Left Chassis Ports (negative port will reverse it!)
+    {-10, 9, 1},  // Right Chassis Ports (negative port will reverse it!)
 
     21,     // IMU Port
-    4.125,  // Wheel Diameter (Remember, 4" wheels without screw holes are actually 4.125!)
-    420);   // Wheel RPM
+    2.75,  // Wheel Diameter (Remember, 4" wheels without screw holes are actually 4.125!)
+    450);   // Wheel RPM
 
 /**
  * Runs initialization code. This occurs as soon as the program is started.
